@@ -11,7 +11,7 @@ try {
     window.Popper = require('popper.js').default;
     window.$ = window.jQuery = require('jquery');
 
-    require('bootstrap');
+    require('html/Cafe_shop/resources/js/bootstrap');
 } catch (e) {}
 
 /**
