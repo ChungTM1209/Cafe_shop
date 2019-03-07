@@ -14,7 +14,7 @@ class CreateTablesTable extends Migration
     public function up()
     {
         Schema::create('tables', function (Blueprint $table) {
-            $table->increments('id');git
+            $table->increments('id');
             $table->string('name');
             $table->timestamps();
         });
