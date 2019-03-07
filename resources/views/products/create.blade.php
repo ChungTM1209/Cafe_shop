@@ -1,7 +1,38 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: lananh
- * Date: 2019-03-07
- * Time: 15:11
- */
+@extends('home')
+@section('title', 'Thêm mới')
+
+@section('content')
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Create</h2>
+        </div>
+        <div class="col-md-12">
+            <form method="post" action="{{ route('products.store') }}" enctype="multipart/form-data">
+                @csrf
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" class="form-control" name="name" >
+                </div>
+                <div class="form-group">
+                    <label>Price</label>
+                    <input type="text" class="form-control" name="price" >
+                </div>
+                <div class="form-group">
+                    <label>Amount</label>
+                    <input type="text" class="form-control" name="amount" >
+                </div>
+                <div class="form-group">
+                    <label>Detail</label>
+                    <input type="text" class="form-control" name="detail" >
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlFile1">Category_id</label>
+                    <input type="text" name="category_id" class="form-control">
+                </div>
+                <button type="submit" class="btn btn-primary">Create</button>
+                <button class="btn btn-secondary" onclick="window.history.go(-1); return false;">Cancel</button>
+            </form>
+        </div>
+    </div>
+
+@endsection
