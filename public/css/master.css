@@ -1,5 +1,46 @@
 *{
+    margin: 0px;
+    padding: 0px;
+}
 
+h2.text-center.mt-4.titleproduct {
+    color: wheat;
+}
+
+.d-flex.justify-content-around.mb-3.mt-4 {
+    display: flex;
+    flex-wrap: wrap;
+    height: 200px;
+}
+
+.listtable {margin-right: 80px;margin-left: 80px;margin-top: 30px;margin-bottom: 15px;}
+.listtableall{
+    background-color: #0d3c15;
+}
+
+h3.text-center.titleCategory {
+    padding-top: 96px;
+    color: #2b883c;
+    font-size: 40px;
+}
+
+.noidung {
+    width: 100%;
+    height: 100%;
+    background-color: #a2f7b0;
+}
+
+html,body {
+    width: 100%;
+    height: 100%;
+    background-color: #0d3c15;
+}
+
+div#navbarTogglerDemo01 {
+    display: flex;
+    justify-content: center;
+    margin-top: 58px;
+    height: 100%;
 }
 
 .row.head{
@@ -28,8 +69,7 @@ h2.text-center.mt-5 {
     border: 6px solid lavender;
     width: 100%;
     height: 500px;
-    margin-top: 200px;
-    margin-bottom: 30px;
+    margin-top: 150px;
 }
 
 a.btn.btn-success {
@@ -41,7 +81,12 @@ a.btn.btn-success {
     border: 5px solid #b7da72;
     border-radius: 13%;
     text-transform: uppercase;
+    font-weight: 800;
+}
 
+a.nav-link.btn.btn-success {
+    width: 128px;
+    margin-left: 34px;
 }
 
 
