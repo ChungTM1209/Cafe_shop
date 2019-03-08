@@ -12,4 +12,11 @@ class CategoryController extends Controller
         $categories = Category::all();
         return view('categories.category', compact('categories'));
     }
+
+    public function filterByCategory($id)
+    {
+        $products = Category::findOrFail($id)->products;
+//        dd($category->products);
+        return view('products.products', compact('products', 'categories'));
+    }
 }
