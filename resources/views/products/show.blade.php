@@ -30,6 +30,8 @@
                 </tr>
                 </tbody>
             </table>
+            <td><a href="{{route('products.destroy', $product->id)}}" class="btn btn-danger">Delete</a></td>
+            <td><a href="{{route('products.edit', $product->id)}}" class="btn btn-warning">Update</a></td>
             <a href="{{ route('products.index') }}" class="btn btn-primary">Back List</a>
         </div>
     </div>

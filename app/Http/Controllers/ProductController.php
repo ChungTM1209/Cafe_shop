@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
 use App\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
@@ -10,10 +11,12 @@ class ProductController extends Controller
 {
     public function index(){
         $products = Product::all();
-        return view('products.list', compact('products'));
+        $categories = Category::all();
+        return view('products.list', compact('products', 'categories'));
     }
     public function create(){
-        return view('products.create');
+        $categories = Category::all();
+        return view('products.create', compact('categories'));
     }
 
     public function store(Request $request){
@@ -31,7 +34,8 @@ class ProductController extends Controller
 
     public function edit($id){
         $product = Product::findOrFail($id);
-        return view('products.edit', compact('product'));
+        $categories = Category::all();
+        return view('products.edit', compact('product', 'categories'));
 
     }
     public function update(Request $request, $id){

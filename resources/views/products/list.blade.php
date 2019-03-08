@@ -32,8 +32,8 @@
                             {{--<td>{{$product->amount}}</td>--}}
                             {{--<td>{{$product->detail}}</td>--}}
                             {{--<td>{{$product->category_id}}</td>--}}
-                            <td><a href="{{route('products.destroy', $product->id)}}" class="btn btn-danger">Delete</a></td>
-                            <td><a href="{{route('products.edit', $product->id)}}" class="btn btn-warning">Update</a></td>
+                            {{--<td><a href="{{route('products.destroy', $product->id)}}" class="btn btn-danger">Delete</a></td>--}}
+                            {{--<td><a href="{{route('products.edit', $product->id)}}" class="btn btn-warning">Update</a></td>--}}
                             <td><a href="{{route('products.show', $product->id)}}" class="btn btn-warning">Show</a></td>
                         </tr>
                     @endforeach

@@ -26,7 +26,15 @@
                 </div>
                 <div class="form-group">
                     <label for="exampleInputPassword1">Category_id</label>
-                    <input type="text" name="category_id" class="form-control"  value="{{ $product->category_id }}" id="exampleInputPassword1">
+                    <select class="form-control" name="category_id">
+                        @foreach($categories as $category)
+                            <option
+                                    @if($product->category_id == $category->id)
+                                    {{"selected"}}
+                                    @endif
+                                    value="{{$category->id}}">{{$category->name}}</option>
+                        @endforeach
+                    </select>
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>

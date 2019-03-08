@@ -27,7 +27,11 @@
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlFile1">Category_id</label>
-                    <input type="text" name="category_id" class="form-control">
+                    <select class="form-control" name="category_id">
+                        @foreach($categories as $category)
+                            <option value="{{ $category->id }}">{{ $category->name }}</option>
+                        @endforeach
+                    </select>
                 </div>
                 <button type="submit" class="btn btn-primary">Create</button>
                 <button class="btn btn-secondary" onclick="window.history.go(-1); return false;">Cancel</button>

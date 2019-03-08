@@ -19,6 +19,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+
 Route::group(['prefix'=>'products'],function (){
     Route::get ('/','ProductController@index')->name('products.index');
     Route::get('/create','ProductController@create')->name('products.create');
@@ -28,3 +29,7 @@ Route::group(['prefix'=>'products'],function (){
     Route::get('/{id}/show','ProductController@show')->name('products.show');
     Route::get('/{id}/destroy','ProductController@destroy')->name('products.destroy');
 });
+
+Route::get('table', 'TableController@index')->name('index');
+Route::get('category', 'CategoryController@index')->name('category.index');
+
